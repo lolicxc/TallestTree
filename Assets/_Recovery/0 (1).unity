@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
-  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -257,20 +256,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &330585548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa45946fb1edbcb49a7b5a25cab3e7cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraFollowStack
-  yOffset: 8
-  smoothTime: 0.25
 --- !u!1001 &398040510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -554,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f7d808093cc88d448fcb5be2d54c2da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.00000014901161
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f7d808093cc88d448fcb5be2d54c2da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -562,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f7d808093cc88d448fcb5be2d54c2da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -0.00000017881393
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f7d808093cc88d448fcb5be2d54c2da, type: 3}
       propertyPath: m_LocalRotation.w
@@ -738,9 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641421825f30081479a1d1e7048d89f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveCylinder
-  moveDirection: 0
   moveSpeed: 0
-  moveRange: 3
 --- !u!1 &1291854130
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,9 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641421825f30081479a1d1e7048d89f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveCylinder
-  moveDirection: 0
   moveSpeed: 1
-  moveRange: 3
 --- !u!4 &1470487036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6233227746467299269, guid: 69803b6dbdaed6e4c9042b38d0a0cbc0, type: 3}
@@ -973,7 +954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1949416750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,8 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   cylinderPrefab: {fileID: 1470487032}
-  spawnerX: {fileID: 1949416751}
-  spawnerZ: {fileID: 2028150358}
+  moveDirection: 0
 --- !u!4 &1949416751
 Transform:
   m_ObjectHideFlags: 0
@@ -997,8 +977,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949416749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.41, y: 0.7, z: 0.31}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.41, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1028,14 +1008,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028150356}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe8d8896ea528f544845691cda2cb238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   cylinderPrefab: {fileID: 1470487032}
-  spawnerX: {fileID: 1949416751}
-  spawnerZ: {fileID: 2028150358}
+  moveDirection: 0
 --- !u!4 &2028150358
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,10 +1085,6 @@ PrefabInstance:
     - target: {fileID: 6811094368357352181, guid: 69803b6dbdaed6e4c9042b38d0a0cbc0, type: 3}
       propertyPath: m_Name
       value: MovingCylinder
-      objectReference: {fileID: 0}
-    - target: {fileID: 6811094368357352181, guid: 69803b6dbdaed6e4c9042b38d0a0cbc0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8214024246890807013, guid: 69803b6dbdaed6e4c9042b38d0a0cbc0, type: 3}
       propertyPath: m_Enabled
